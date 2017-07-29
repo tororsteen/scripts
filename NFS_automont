@@ -1,0 +1,26 @@
+#!/bin/bash/
+#Script til å montere nfs-share bare når vi er hjemme
+#
+#Lagrer STDOUT og STDERR
+exec 3>&1
+exec 4>&2
+#Redirigerer alt output til null
+exec 1> /dev/null
+exec 2> /dev/null
+#Definerer funksjonen
+function ErHjemme {
+	showmount -e Bedehusgata
+}
+#Programmet
+sleep 5
+ErHjemme
+#Fanger exitstatus på funksjonen og monterer hvis den er 0
+Hjemme=$?
+#Setter STDOUT og STDERR tilbake
+exec 1>&3
+exec 2>&4
+if [ $Hjemme -eq 0 ]
+then
+	sudo mount -t nfs4 Bedehusgata:/felles /media/Bedehusgata
+	sudo mount -t nfs4 Bedehusgata:/multimedia /media/multimedia
+fi
