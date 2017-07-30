@@ -1,0 +1,26 @@
+#!/bin/bash
+# script til å flytte filer til arkiv på server
+# Scriptet må kjøres i mappa filer skal flyttes fra
+# Mappa filene skal flyttes til må eksistere
+# to parametere: 
+# 1: Fila med navn på filer som skal flyttes
+# 2: Mappa filer skal flyttes til
+if [ $# -ne 2 ]
+then
+	echo "Skriptet krever to parametere: Fil med filnavn og sti til TilMappe"
+else
+	if [ -d $TilMappe ]
+	then
+		filliste=$1
+		TilMappe=$2
+		IFSOLD=$IFS
+		IFS=$'\n'
+		for fil in $(cat $filliste)
+		do
+			mv $fil $TilMappe
+		done
+		echo "Filene er flytta til " $TilMappe
+	else
+		echo "Mappa filene skal flyttes til eksisterer ikke"
+	fi
+fi

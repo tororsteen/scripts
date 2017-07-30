@@ -1,0 +1,14 @@
+#!/bin/bash
+# Script til å erstatte mellomrom i filnavn med _
+# Scriptet må krjøres fra mappa der filnavn skal forandres. Er rekursivt på alle filer i undermapper.
+temp=$(mktemp -t temp.XXXXXX)
+ ls -d -1 $PWD/**/* > $temp
+IFS=$'\n'
+for filnavn in $(cat $temp)
+do
+	filnavn2=$(echo $filnavn | sed 's/ /_/g')
+	if [ $filnavn != $filnavn2 ]
+	then
+		mv $filnavn $filnavn2
+	fi
+done

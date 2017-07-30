@@ -1,0 +1,20 @@
+#!/bin/bash
+oppkobling=$1
+nettverk=$2
+gateway=$3
+
+function ErHjemme {
+	showmount -e Bedehusgata
+}
+
+echo "Oppkoblingstype: "$oppkobling > /home/tor/Scripts/nettverk/logg
+echo "Nettverksnavn: "$nettverk >> /home/tor/Scripts/nettverk/logg
+echo "Gateway: "$gateway >> /home/tor/Scripts/nettverk/logg
+ErHjemme
+Hjemme=$?
+if [ $Hjemme -eq 0 ]
+then
+mount -t nfs4 Bedehusgata:/felles /mnt/Bedehusgata
+echo "Montert Bedehusgata: "$? >> /home/tor/Scripts/nettverk/logg
+mount -t nfs4 Bedehusgata:/multimedia /mnt/Multimedia
+fi

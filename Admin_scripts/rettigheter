@@ -1,0 +1,37 @@
+#!/bin/bash
+# tester zenity på chmod
+temp=$(mktemp -t temp.XXXXXX)
+zenity --file-selection > $temp
+fil=$(cat $temp)
+
+temp2=$(mktemp -t temp2.XXXXXX)
+temp3=$(mktemp -t temp3.XXXXXX)
+zenity --list --checklist --height=400 --title "Endre rettigheter"  --column "Velg" --column "Rettighet" FALSE "Lese" FALSE "Skrive" FALSE "Kjøre" FALSE "Eier" FALSE "Gruppe" FALSE "Andre" > $temp2
+sed  's/|/\n/g' $temp2 > $temp3
+rett=""
+hvem=""
+for linje in $(cat $temp3)
+do
+	case $linje in
+		Lese)
+			c="r"
+			rett=$rett$c;;
+		Skrive)
+			c="w"
+			rett=$rett$c;;
+		Kjøre)
+			c="x"
+			rett=$rett$c;;
+		Eier)
+			c="u"
+			hvem=$hvem$c;;
+		Gruppe)
+			c="g"
+			hvem=$hvem$c ;;
+		Andre)
+			c="o"
+			hvem=$hvem$c;;
+	esac
+done
+sudo chmod $hvem=$rett $fil
+

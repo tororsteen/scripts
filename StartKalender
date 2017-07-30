@@ -1,0 +1,9 @@
+#!/bin/bash
+#Script til å starte calcurse bare til å lese gra gmail kalender.
+rm /home/tor/.calcurse/apts
+cd /home/tor/kalender
+rm *
+wget https://calendar.google.com/calendar/ical/63ecco%40gmail.com/private-861d76c5a5cb80394c0c5b1bec2a1bd6/basic.ics
+calcurse -i basic.ics
+calcurse
+

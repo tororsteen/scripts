@@ -1,0 +1,4 @@
+#!/bin/bash
+echo `date`
+
+rsync -avz -e ssh tor@orsteen.dyndns-home.com:/felles/ /home/tor/Backup/felles

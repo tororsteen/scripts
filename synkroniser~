@@ -1,0 +1,7 @@
+#!/bin/bash
+echo `date`
+rsync -vaz -e ssh /home/tor/Dokumenter/ tor@Bedehusgata:/felles/tor_filer/dokumenter
+rsync -vaz -e ssh /home/tor/TeX/ tor@Bedehusgata:/felles/tor_filer/latex
+rsync -vaz -e ssh /home/tor/bridge/ tor@Bedehusgata:/felles/bridge
+rsync -vaz -e ssh /home/tor/Musikk/ tor@Bedehusgata:/felles/musikk
+

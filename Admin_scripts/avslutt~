@@ -1,0 +1,4 @@
+#!/bin/bash
+
+svar=zenity --question --title="Test" --text="Vil du slå av maskinen?"
+echo $svar

@@ -1,0 +1,9 @@
+#!/bin/bash
+#starter programmer som er avhengige av nettet
+echo "skripet starta"
+exec qgmailnotifier &
+echo "qgmail starta"
+exec dropbox
+echo "dropbox starta"
+sleep 5
+exec (conky -c /home/tor/.config/i3/conkyrc.i3)

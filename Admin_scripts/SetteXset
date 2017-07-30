@@ -1,0 +1,7 @@
+#!/bin/bash
+#Script til å slå av strønstyring og screensaver
+xset s 0 0
+xset s off
+xset s noblank
+xset s noexspose
+xset s off -dpms

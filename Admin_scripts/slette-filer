@@ -1,0 +1,9 @@
+#!/bin/bash
+# script til å slette filer i stående mappefra ei filliste i fila gitt som parameter 
+# lista må først lages, og så må scriptet kopieres til stående mappe
+slettefil=$1
+IFS=$'\n'
+for fil in $(cat $slettefil)
+do
+	rm $fil
+done

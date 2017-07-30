@@ -1,0 +1,30 @@
+#!/bin/bash
+#Script for å lage backup av home og endra konfigrurasjonsfiler
+#Velger først mappe for backupfiler
+zenity --title "Velg mappe"  --info --text="Velg mappa der backup skal lagres"
+temp=$(mktemp -t temp.XXXXXX)
+zenity --file-selection --directory > $temp
+B_mappe=$(cat $temp)
+#Sjekker at undermappa home eksisterer
+if [ ! -d $B_mappe/home ]
+then
+	mkdir $B_mappe/home	
+fi
+#synkroniserer filene i home
+rsync -aAXv $HOME/ $B_mappe/home
+#sjekker at undermappa etc_endra finnes
+if [ ! -d $B_mappe/etc_endra ]
+then
+	mkdir $B_mappe/etc_endra
+fi
+#Finner de filene som er endra i oppsettsfiler
+temp2=$(mktemp -t temp2.XXXXXX)
+sudo pacman -Qii | awk '/^MODIFIED/ {print $2}' >$temp2
+#Kopierer disse
+IFS=$'\n'
+for fil in $(cat $temp2)
+do
+	sudo cp $fil $B_mappe/etc_endra/
+done
+echo "Filene er ferdig kopiert"
+

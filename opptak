@@ -1,0 +1,78 @@
+#!/bin/bash
+#Script til å ta opp fra skjermen med lyd
+
+#Setter opp temp-filer for å lese fra zenity
+temp=$(mktemp -t temp.XXXXXX)
+temp2=$(mktemp -t temp2.XXXXXX)
+temp3=$(mktemp -t temp3.XXXXXX)
+temp4=$(mktemp -t temp4.XXXXXX)
+
+#Velger mappe hvor scriptet skal lagres
+zenity --file-selection --directory --title="Mappe for lagring" > $temp
+mappe=$(cat $temp)
+zenity --entry --title="Filnavn" --text="Filnavn for opptaket:" > $temp2
+filnavn=$(cat $temp2)
+
+#Erstatter ev. mellomrom i filnavn med underscore  
+filnavn=${filnavn// /_}
+
+#Velger videoformat
+zenity --list \
+  --radiolist \
+  --title="Velg format for opptaket" \
+  --column="Velg" \
+  --column="Videoformat"  \
+  TRUE mp4 \
+  FALSE avi \
+  FALSE mkv > $temp3
+filtype=$(cat $temp3)
+
+#Lager det fullstendige filnavnet
+nyfil=$mappe/$filnavn.$filtype
+fil=$mappe/$filnavn.mkv
+#Velger kvalitet ved å sette gjennomsnittlig bitrate
+zenity --list \
+  --radiolist \
+  --title="Velg kvalitet for opptaket" \
+  --column="Velg" \
+  --column="Kvalitet"  \
+  FALSE Lav \
+  TRUE Middels \
+  FALSE Høy > $temp4
+
+case $(cat $temp4) in
+    Lav)
+        bitrate=200k ;;
+    Middels)
+        bitrate=1000k ;;
+	Høy)
+		bitrate=2000k
+esac
+
+#Brukes under testing
+#echo "Mappe:" $mappe
+#echo "Fil:" $filnavn
+#echo "Filtype:" $filtype
+#echo "Komplett filnavn:" $fil
+#echo "Bitrate" $bitrate
+
+#Sjølve kommandoen for å gjøre opptaket
+ffmpeg  -f pulse -ac 2 -i default  -f x11grab -s 1366x768 -r 30 -i $DISPLAY   -c:v libx264 -preset ultrafast -threads 0 -b $bitrate -y $fil
+#ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default -y $fil
+#Konverterer til annet format
+if [ $fil != $nyfil ]
+	then
+		zenity --warning --text "Konverter til ønska format. Vær tålmodig!"
+		#Tester exitstatus til dialogboksen. Ja=0, nei=1
+		if [ $? -eq 0 ]
+			then	
+
+				case $filtype in
+   				 	mp4)
+       			 		ffmpeg -i $fil -bsf:v h264_mp4toannexb -vcodec copy -acodec copy $nyfil;;
+    				avi)
+					mencoder $fil -o $nyfil -ovc lavc -oac lavc
+				esac
+				rm $fil
+		fi
+fi

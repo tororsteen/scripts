@@ -1,0 +1,25 @@
+#!/bin/bash
+function VG {
+ping -c 3 vg.no
+}
+function Hjemme {
+ping -c 3 Bedehusgata
+}
+VG
+vgping=$?
+Hjemme
+hjemmeping=$?
+if [ $vgping -eq 0 ]
+then
+	echo "Vg er online"
+else
+	echo "vg.no er nede"
+fi
+
+if [ $hjemmeping -eq 0 ]
+then
+	echo "Du er hjemme"
+else
+	echo "Du er borte"
+fi
+echo "Slutt"

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Script til å skru av maskinen
+# Presenterer en diaogboks med ja/nei
+#
+M1=$( grep -c '/mnt/Bedehusgata' /etc/mtab )
+M2=$( grep -c '/mnt/Multimedia' /etc/mtab )
+zenity --question --title="Avslutt" --text="Vil du slå av maskinen?"
+#Tester exitstatus til dialogboksen. Ja=0, nei=1
+if [ $? -eq 0 ]
+	then
+		if [ $M1 -eq 1 ]
+			then
+				sudo umount /mnt/Bedehusgata
+		fi
+		if [ $M2 -eq 1 ]
+			then
+				sudo umount /mnt/Multimedia
+		fi
+		#exec sudo systemctl stop netctl-auto@wlp6s0.service
+		exec systemctl poweroff
+fi
