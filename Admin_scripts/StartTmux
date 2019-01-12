@@ -6,9 +6,12 @@ xclip &
 sn=Kommando
 tmux new-session -s "$sn" -n arbeid -d
 tmux new-window -t "$sn":2 -n vim   'vim -c "Calendar -position=tab"'
-tmux new-window -t "$sn":3 -n div
-tmux new-window -t "$sn":4 -n info
-tmux select-window -t "$sn":4
+tmux new-window -t "$sn":3 -n mutt 
+tmux new-window -t "$sn":4 -n div
+tmux new-window -t "$sn":5 -n info
+tmux select-window -t "$sn":3
+tmux send-keys -t "mutt" "Mutt" Enter
+tmux select-window -t "$sn":5
 tmux split-window -h -p 25 
 tmux split-window -v -p 75 
 tmux select-window -t "$sn":1

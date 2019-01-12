@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
+
 sudo mount -t nfs4 Bedehusgata:/felles /mnt/Bedehusgata
 sudo mount -t nfs4 Bedehusgata:/Multimedia /mnt/Multimedia

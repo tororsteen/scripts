@@ -34,6 +34,9 @@ rsync -vaz -e ssh /home/tor/Dokumenter/ tor@Bedehusgata:/felles/tor_filer/dokume
 rsync -vaz -e ssh /home/tor/Latex/ tor@Bedehusgata:/felles/tor_filer/latex
 rsync -vaz -e ssh /home/tor/Bridge/ tor@Bedehusgata:/felles/bridge
 rsync -vaz -e ssh /home/tor/Musikk/ tor@Bedehusgata:/felles/musikk
+rsync -vaz -e ssh /home/tor/Bilder/ tor@Bedehusgata:/felles/tor_filer/bilder
+rsync -vaz -e ssh /home/tor/Bilder_fra_Inger/ tor@Bedehusgata:/felles/Bilder_fra_Inger
+rsync -vaz -e ssh /home/tor/Mail/ tor@Bedehusgata:/felles/tor_filer/mail
 
 #Tilbake til STDOUT og STDERR
 exec 1>&3
