@@ -1,0 +1,9 @@
+#!/bin/bash
+# script til installere AUR-pakker lista opp i fila gitt som parameter 
+# lista må først lages
+pakkeliste=$1
+IFS=$'\n'
+for pakke in $(cat $pakkeliste)
+do
+	pikaur -S $pakke
+done

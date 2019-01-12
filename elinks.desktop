@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=elinks
+GenericName=Web Browser
+Exec=/usr/bin/elinks %U
+Terminal=true
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
