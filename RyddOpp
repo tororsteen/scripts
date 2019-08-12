@@ -1,3 +1,5 @@
 #!/bin/zsh
 sudo paccache -rk2
 sudo paccache -ruk0
+sudo paccache -rk2 -c ~/.cache/pikaur/pkg 
+sudo paccache -ruk0 -c ~/.cache/pikaur/pkg 
