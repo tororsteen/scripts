@@ -30,13 +30,13 @@ sudo chmod -R a=rwX /home/tor/Dokumenter/Data/etc_endra/
 
 #Synkroniserer med serveren
 
-rsync -vaz -e ssh /home/tor/Dokumenter/ tor@Bedehusgata:/felles/tor_filer/dokumenter
-rsync -vaz -e ssh /home/tor/Latex/ tor@Bedehusgata:/felles/tor_filer/latex
-rsync -vaz -e ssh /home/tor/Bridge/ tor@Bedehusgata:/felles/bridge
-rsync -vaz -e ssh /home/tor/Musikk/ tor@Bedehusgata:/felles/musikk
-rsync -vaz -e ssh /home/tor/Bilder/ tor@Bedehusgata:/felles/tor_filer/bilder
-rsync -vaz -e ssh /home/tor/Bilder_fra_Inger/ tor@Bedehusgata:/felles/Bilder_fra_Inger
-rsync -vaz -e ssh /home/tor/Mail/ tor@Bedehusgata:/felles/tor_filer/mail
+rsync -vaz -e ssh /home/tor/Dokumenter/ tor@192.168.10.100:/felles/tor_filer/dokumenter
+rsync -vaz -e ssh /home/tor/Latex/ tor@192.168.10.100:/felles/tor_filer/latex
+rsync -vaz -e ssh /home/tor/Bridge/ tor@192.168.10.100:/felles/bridge
+rsync -vaz -e ssh /home/tor/Musikk/ tor@192.168.10.100:/felles/musikk
+rsync -vaz -e ssh /home/tor/Bilder/ tor@192.168.10.100:/felles/tor_filer/bilder
+rsync -vaz -e ssh /home/tor/Bilder_fra_Inger/ tor@192.168.10.100:/felles/Bilder_fra_Inger
+rsync -vaz -e ssh /home/tor/Mail/ tor@192.168.10.100:/felles/tor_filer/mail
 
 #Tilbake til STDOUT og STDERR
 exec 1>&3
