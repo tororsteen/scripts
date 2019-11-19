@@ -1,0 +1,46 @@
+fornavn	etternavn	tlf	e_post
+Alf	Wekre	91720256	NULL
+Anders	Sørumshaugen	91618090	asoerums@online.no
+Anders Dalby	Paulsen	41381048	an-dalb@online.no
+Arlette	Sorin	48073925	arlette.sorin@outlook.com
+Arne	Sandvik	90736530	arnej-sa@online.no
+Berit	Arnesen	90062034	berit.arnesen@gmail.com
+Berit	Nyhagen	95184635	berit_nyhagen@hotmail.com
+Ellen Cathrine	Orsteen	40236669	63ecco@gmail.com
+Eva	Flesaker	95872253	eva@flesaker.no
+Geir Kristoffer	Haugen	99011550	geirkristofferhaugen@gmail.com
+Hans Roar	Braathen	32756273	NULL
+Helge	Lauvlid	93420764	helge.lauvlid@gmail.com
+Helle Johanne	Tuko	97573276	helle.tuko@gmail.com
+Ingar	Ekeren	90044089	ieker@online.no
+Jan Arthur	Varmo	97011033	NULL
+Jan Enger	Kristoffersen	97463522	janengerkris@gmail.com
+Jan Erik	Larsen	91767906	NULL
+Karin	Brennhaugen	48004441	karin.brennhaugen@gmail.com
+Karl-Erik	Torgersen	91156794	karl.erik.torgersen@gmail.com
+Kjell	Hakkim	99249248	kjellvesle@msn.com
+Kjell	Bråten	47873777	kjell.braten@hotmail.com
+Kjell	Bråten	48223616	NULL
+Leah	Bergan Paulsen	0	NULL
+Marie Riise	Wekre	32756718	NULL
+May	Kjellevold	95200518	maykjellevold@hotmail.com
+Merete	Kruke	90774152	merete-kruke@stake.nu
+Ola Tom	Evje	40400615	olatom@amn.no
+Olav	Vee	97148187	olav.vee@online.no
+Øyvind	Bråten	90135615	gakkshl@gmail.com
+Per Drange	Hansen	40039644	pdh@hoegh.com
+Reidun Simenstad	Røren	45407574	reidun.simenstad.roren@gmail.com
+Rolf	Riise	92264323	NULL
+Rolf Inge	Braathen	99518472	ribraathen@hotmail.com
+Roy Drange	Hansen	90666006	roydh@getmail.no
+Steinar	Johannesen	47354278	stjo@unicon.no
+Sverre	Arnesen	97711449	sverre.arnesen@modumktv.no
+Terje	Raaen	90759608	boella-r@online.no
+Tor	Orsteen	97525589	tororsteen@gmail.com
+Toril Jonset	Varlo	92686817	Toril.Johnset@gmail.com
+Tove	Løkka	98666497	to-g-loe@online.no
+Turid	Skyba	92438175	turidjoh@hotmail.com
+Vidar	Weum	97146065	NULL
+Vidar	Hollås	97143263	vidar_hol@hotmail.com
+Vigdis	Nikkerud	93812324	vigdis.tore@yahoo.no
+Wilhelm	Foslien	91154527	NULL

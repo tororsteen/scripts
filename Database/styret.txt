@@ -1,0 +1,9 @@
+verv	fornavn	etternavn	postnr	poststed	tlf	e_post
+Leder	Ellen Cathrine	Orsteen	3055	Krokstadelva	40236669	63ecco@gmail.com
+Nestleder	Geir Kristoffer	Haugen	3617	Kongsberg	99011550	geirkristofferhaugen@gmail.com
+Kasserer	Arlette	Sorin	3340	Åmot	48073925	arlette.sorin@outlook.com
+Styremedlem1	Terje	Raaen	3300	Hokksund	90759608	boella-r@online.no
+Styremedlem2	Rolf	Riise	3300	Hokksund	92264323	NULL
+Vara1	Rolf Inge	Braathen	3330	Skotselv	99518472	ribraathen@hotmail.com
+Vara2	Kjell	Hakkim	3300	Hokksund	99249248	kjellvesle@msn.com
+Turneringsleder	Tor	Orsteen	3055	Krokstadelva	97525589	tororsteen@gmail.com

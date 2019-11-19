@@ -1,0 +1,46 @@
+fornavn	etternavn	adresse	postnr	poststed
+Jan Arthur	Varmo	Stryken	3300	Hokksund
+Olav	Vee	Blåklokkeveien 45	3050	Mjøndalen
+Helge	Lauvlid	Krøderveien 355	3370	Vikersund
+Wilhelm	Foslien	Holteveien 235	3300	Hokksund
+May	Kjellevold	Krøderveien 748	3370	Vikersund
+Kjell	Bråten	Rabbenveien 274	3350	Prestfoss
+Ola Tom	Evje	Kongshaugveien 1	3340	Åmot
+Sverre	Arnesen	Øyaveien 9H	3370	Vikersund
+Rolf Inge	Braathen	Verksceien 97	3330	Skotselv
+Hans Roar	Braathen	Hæreberget 21	3330	Skotselv
+Jan Enger	Kristoffersen	Kolbergveien 57	3320	Vestfossen
+Terje	Raaen	Ringeriksveien 385	3300	Hokksund
+Rolf	Riise	Østre Brugata 5	3300	Hokksund
+Jan Erik	Larsen	Briskeveien 24	3320	Vestfossen
+Anders	Sørumshaugen	Kolbergveien 25	3320	Vestfossen
+Alf	Wekre	Hasselveien 52	3330	Skotselv
+Tor	Orsteen	Bedehusgata 30	3055	Krokstadelva
+Arne	Sandvik	Semsmoveien 74	3300	Hokksund
+Berit	Nyhagen	Veveribakken 4	3040	Drammen
+Ingar	Ekeren	Klokkerstien 4	3302	Hokksund
+Marie Riise	Wekre	Hasselveien 52	3330	Skotselv
+Berit	Arnesen	Gressgangen 21	3300	Hokksund
+Turid	Skyba	Dynge 49	3300	Hokksund
+Merete	Kruke	Neptunveien 91	3055	Krokstadelva
+Anders Dalby	Paulsen	Brattbakken 9	3330	Skotselv
+Tove	Løkka	Hellebekkveien 10	3057	Solbergelva
+Ellen Cathrine	Orsteen	Bedehusgata 30	3055	Krokstadelva
+Vigdis	Nikkerud	Aasveien 3	3320	Vestfossen
+Per Drange	Hansen	Lyngveien 1	3300	Hokksund
+Kjell	Hakkim	Vesleveien 3	3300	Hokksund
+Vidar	Weum	Tonsveien	3370	Vikersund
+Øyvind	Bråten	Blåveisstien 4	3360	Geithus
+Steinar	Johannesen	Drammensveien 95	3050	Mjøndalen
+Geir Kristoffer	Haugen	Numedalsveien 103	3617	Kongsberg
+Arlette	Sorin	Bøkveien 11	3340	Åmot
+Karl-Erik	Torgersen	Granbakken	3624	Lyngdal
+Leah	Bergan Paulsen	Brattbakken 9	3330	Skotselv
+Eva	Flesaker	Hoensvannsveien 2	3302	Hokksund
+Toril Jonset	Varlo	Skotsveien 401	3302	Hokksund
+Reidun Simenstad	Røren	Strømshauggata 44	3300	Hokksund
+Roy Drange	Hansen	Tangengt. 8	3300	Hokksund
+Karin	Brennhaugen	Tingelstadmoen 35	3340	Åmot
+Kjell	Bråten	-	3535	Krøderen
+Helle Johanne	Tuko	Kløverveien 4	3302	Hokksund
+Vidar	Hollås	Granlia 10	3050	Mjøndalen

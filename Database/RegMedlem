@@ -1,0 +1,20 @@
+#!/bin/bash
+#Legger inn navn i medlemsdatabasen til Fjerdingstad
+read -p "Medlemsnummer: " nr
+read -p "Etternavn: " en
+read -p "Fornavn: " fn
+read -p "Adresse: " adr
+read -p "Postnummer: " pnr
+read -p "Kjønn (M/K): " kj
+read -p "Medlemstype: " ty
+read -p "Telefon: " tlf
+read -p "E-post: " ep
+read -p "Fødselsår: " faa
+read -p "Født, dag: " fd
+read -p "Født, mnd: " fm
+statement=" INSERT INTO medlemmer VALUES ($nr, '$en', '$fn', '$adr', $pnr, '$kj', '$ty', $tlf, '$ep', $faa, $fd, $fm)"
+
+mysql Fjerdingstad -u tor << EOF
+$statement
+EOF
+

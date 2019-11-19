@@ -1,0 +1,9 @@
+fornavn	etternavn	f_dag	f_mnd	f_aar
+Toril Jonset	Varlo	9	1	1969
+Berit	Arnesen	1	3	1944
+Vigdis	Nikkerud	6	3	1949
+Kjell	Bråten	7	4	1949
+Arne	Sandvik	11	4	1944
+Sverre	Arnesen	15	4	1944
+Olav	Vee	12	10	1944
+Jan Erik	Larsen	21	11	1944
