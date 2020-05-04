@@ -1,0 +1,5 @@
+#!/bin/bash
+# Script til å montere ~/pkg til /var/cache/pacman/pkg
+# Formål: Frigjøre plass på /-partisjonen.
+sudo mount --bind /home/tor/pkg /var/cache/pacman/pkg
+
