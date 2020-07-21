@@ -1,0 +1,44 @@
+
+#!/bin/bash
+
+# Lagrer STDOUT og STDERR
+
+exec 3>&1
+exec 4>&2
+
+#Oppretter filer
+DATO=$(date '+%d%m%y')
+LOGG=/home/tor/Scripts/Logg/logg_$DATO
+FEIL=/home/tor/Scripts/Logg/feil_$DATO
+
+#Omdirigerer utskrift og feilmedlinger til filene
+exec 1>$LOGG
+exec 2>$FEIL
+
+#Oppretter liste over installerte pakker og lagrer den så den blir kopiert til serveren
+pacman -Qqne > /home/tor/Dokumenter/Data/Pakkelister/pkg.list
+
+#Oppretter liste over endra /etc-filer
+temp=$(mktemp -t temp.XXXXXX)
+sudo pacman -Qii | awk '/^MODIFIED/ {print $2}' >$temp
+#Kopierer disse
+IFS=$'\n'
+for fil in $(cat $temp)
+do
+	sudo cp $fil /home/tor/Dokumenter/Data/etc_endra/
+done
+sudo chmod -R a=rwX /home/tor/Dokumenter/Data/etc_endra/
+
+#Synkroniserer med serveren
+
+rsync -vazz -e ssh /home/tor/Dokumenter/ tor@ssh orsteen.dyndns-home.com:/felles/tor_filer/dokumenter
+rsync -vazz -e ssh /home/tor/Latex/ tor@ssh orsteen.dyndns-home.com:/felles/tor_filer/latex
+rsync -vazz -e ssh /home/tor/Bridge/ tor@ssh orsteen.dyndns-home.com:/felles/bridge
+rsync -vazz -e ssh /home/tor/Musikk/ tor@ssh orsteen.dyndns-home.com:/felles/musikk
+rsync -vazz -e ssh /home/tor/Bilder/ tor@ssh orsteen.dyndns-home.com:/felles/tor_filer/bilder
+rsync -vazz -e ssh /home/tor/Bilder_fra_Inger/ tor@ssh orsteen.dyndns-home.com:/felles/Bilder_fra_Inger
+rsync -vazz -e ssh /home/tor/Mail/ tor@ssh orsteen.dyndns-home.com:/felles/tor_filer/mail
+
+#Tilbake til STDOUT og STDERR
+exec 1>&3
+exec 2>&4
