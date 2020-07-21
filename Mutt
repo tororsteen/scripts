@@ -1,4 +1,5 @@
 #!/bin/zsh
+echo "Henter post med mpop"
 mpop
 offlineimap
 notmuch new
