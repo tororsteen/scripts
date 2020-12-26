@@ -1,0 +1,7 @@
+#!/bin/zsh
+#Script til å omgjøre tekstfiler til pdf
+#Må ha fila som skal gjøres om som parameter
+
+inn=$1
+ut=$inn'.pdf'
+paps $inn -o $ut
