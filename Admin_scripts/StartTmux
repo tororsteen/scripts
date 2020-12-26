@@ -9,6 +9,7 @@ tmux new-window -t "$sn":2 -n vim   'vim -c "Calendar -position=tab"'
 tmux new-window -t "$sn":3 -n mutt 
 tmux new-window -t "$sn":4 -n div
 tmux new-window -t "$sn":5 -n info
+tmux new-window -t "$sn":6 -n ranger 'ranger'
 tmux select-window -t "$sn":3
 tmux send-keys -t "mutt" "Mutt" Enter
 tmux select-window -t "$sn":5
