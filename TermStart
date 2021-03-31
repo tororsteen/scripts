@@ -1,0 +1,12 @@
+#!/bin/zsh
+xdotool key ctrl+shift+t
+xdotool key ctrl+shift+t
+xdotool type "vim -c Calendar"
+xdotool key Return
+xdotool key ctrl+shift+t
+xdotool type "Mutt"
+xdotool key Return
+xdotool key ctrl+shift+t
+xdotool type "ranger"
+xdotool key Return
+xdotool key ctrl+1
