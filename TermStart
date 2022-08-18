@@ -1,8 +1,8 @@
 #!/bin/zsh
 xdotool key ctrl+shift+t
 xdotool key ctrl+shift+t
-xdotool type "vim -c Calendar"
-xdotool key Return
+#xdotool type "vim -c Calendar"  // til kalenderen virker igen?
+#xdotool key Return
 xdotool key ctrl+shift+t
 xdotool type "Mutt"
 xdotool key Return
