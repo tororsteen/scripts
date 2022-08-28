@@ -3,10 +3,12 @@ xdotool key ctrl+shift+t
 xdotool key ctrl+shift+t
 #xdotool type "vim -c Calendar"  // til kalenderen virker igen?
 #xdotool key Return
+xdotool type "calMåned"
+xdotool key Return
 xdotool key ctrl+shift+t
 xdotool type "Mutt"
 xdotool key Return
 xdotool key ctrl+shift+t
 xdotool type "ranger"
 xdotool key Return
-xdotool key ctrl+1
+xdotool key ctrl+shift+1
