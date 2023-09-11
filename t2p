@@ -3,5 +3,6 @@
 #Må ha fila som skal gjøres om som parameter
 
 inn=$1
-ut=$inn'.pdf'
-paps $inn -o $ut
+libreoffice --convert-to "pdf" $inn
+#ut=$inn'.pdf'
+#paps $inn -o $ut
