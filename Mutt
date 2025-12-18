@@ -1,6 +1,6 @@
 #!/bin/zsh
-echo "Henter post med mpop"
-systemctl --user start mpop.service
+#echo "Henter post med mpop"
+#systemctl --user start mpop.service
 echo "Henter post med offlineimap"
 systemctl --user start offlineimap.service
 notmuch new
