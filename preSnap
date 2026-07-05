@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Script til å kjøre før snapshot av home
+
+#Oppretter liste over installerte pakker og lagrer den så den blir kopiert til serveren
+pacman -Qqne > /home/tor/Dokumenter/Data/Konfigurasjoner/pkg.list
+
+#Samme for AUR-pakker
+pacman -Qqm > /home/tor/Dokumenter/Data/Konfigurasjoner/aur.list 
+
+#Oppretter liste over endra /etc-filer
+temp=$(mktemp -t temp.XXXXXX)
+sudo pacman -Qii | awk '/^MODIFIED/ {print $2}' >$temp
+#Kopierer disse
+IFS=$'\n'
+for fil in $(cat $temp)
+do
+	sudo cp $fil /home/tor/Dokumenter/Data/etc_endra/
+done
+sudo chmod -R a=rwX /home/tor/Dokumenter/Data/etc_endra/
+
