@@ -1,12 +1,18 @@
 #!/bin/bash
 #Lagrer ei temp-fil
 temp=$(mktemp -t temp.XXXXXX)
+
 #Finner modifiserte filer
-pacman -Qii | awk '/\[modified\]/ {print $(NF - 1)}' >tmp
+comm -13 <(pacman -Qlq | sort) <(find /etc -type f | sort) > $temp
+#Skal filtrere bort disse seinere
+prefix="/etc/ca-certificates/"
+#pacman -Qii | awk '/\[modified\]/ {print $(NF - 1)}' > tmp
 #Kopierer disse
 IFS=$'\n'
 for fil in $(cat $temp)
 do
-	sudo cp $fil /home/tor/Dokumenter/Data/etc_endra/
+	if [[ "$fil" != "$prefix"* ]]; then
+		sudo cp $fil /home/tor/Dokumenter/Data/etc_endra/
+	fi
 done
 sudo chmod -R a=rwX /home/tor/Dokumenter/Data/etc_endra/
