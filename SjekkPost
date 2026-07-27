@@ -1,0 +1,5 @@
+#!/bin/zsh
+#Skript til å bruke i Conky
+
+find /home/tor/Mail/Gmail/INBOX/new -maxdepth 1 -type f -printf '.' | wc -c
+

@@ -1,0 +1,14 @@
+#!/bin/zsh
+wdotool key ctrl+shift+t
+wdotool key ctrl+shift+t
+#xdotool type "vim -c Calendar"  // til kalenderen virker igen?
+#xdotool key Return
+wdotool type "calMåned"
+wdotool key Return
+wdotool key ctrl+shift+t
+wdotool type "Mutt"
+wdotool key Return
+wdotool key ctrl+shift+t
+wdotool type "ranger"
+wdotool key Return
+wdotool key alt+1
