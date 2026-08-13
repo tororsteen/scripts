@@ -1,5 +1,7 @@
 #!/bin/zsh
 wdotool key ctrl+shift+t
+wdotool type "kitty @ goto-layout fat"
+wdotool key Return
 wdotool key ctrl+shift+t
 #xdotool type "vim -c Calendar"  // til kalenderen virker igen?
 #xdotool key Return
